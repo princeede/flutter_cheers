@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fab_dialer/flutter_fab_dialer.dart';
 
-import '../pages/calender_page.dart';
+import '../pages/drink_template_page.dart';
 
 class HomeFAB extends StatefulWidget{
 
@@ -68,7 +68,7 @@ class HomeFABState extends State<HomeFAB>{
           Colors.blueGrey,
           5.0,
           "Button Menu",
-          _incrementCounter,
+          goToPage,
           "Add Malt",
           Colors.blueGrey,
           Colors.white,
@@ -104,10 +104,10 @@ class HomeFABState extends State<HomeFAB>{
   }
 
   void goToPage(){
-    String name = "calender";
+    String name = "drink_template";
     switch(name){
-      case "calender":
-//        Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new CalenderPage(title: "Diary",)));
+      case "drink_template":
+        Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new DrinkTemplatePage()));
         break;
       default:
         break;
